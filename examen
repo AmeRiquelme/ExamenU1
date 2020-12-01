@@ -1,0 +1,109 @@
+package examen;
+
+import java.util.ArrayList;
+
+import java.util.List;
+import java.util.Scanner;
+
+
+public class Examen {
+
+    
+    public static void main(String[] args)
+    {
+       /* ArrayList<String> numeros = new ArrayList <String>();
+        Scanner leer = new Scanner (System.in);
+        List lista= new ArrayList <>();
+         //ADD para ingresar elementos 
+        lista.add(3);
+        // obtener un dato
+        lista.get(0);
+        //obtener tama;o de la lista
+        lista.size();
+        //set para modificar un elemento de una posicion x
+        lista.set(0, 2);
+        //es para quitar un elemento de una posicion x
+        lista.remove(8);
+        
+      */  
+        
+        Metodos metodo = new Metodos();
+        Scanner V = new Scanner(System.in);
+        List<Integer> lista = new ArrayList<Integer>();
+        int opc1, dato;
+        int a, b, c;
+        System.out.println("Hola");
+        for (int i = 0; i < 10; i++) {
+            System.out.println("[" + (i + 1) + "]Ingresa un dato");
+            dato = V.nextInt();
+            lista.add(dato);
+        }
+        do {
+            System.out.println("[1]Suma"
+                    + "\n[2]Resta"
+                    + "\n[3]Multiplicacion"
+                    + "\n[4]Salir");
+            opc1 = V.nextInt();
+            switch (opc1) {
+                case 1:
+                    System.out.println("Caso suma"
+                            + "\nIngrese el indice de 3 posiciones a sumar");
+                  
+                        System.out.println("Indice 1");
+                        a = V.nextInt();
+                  
+                        System.out.println("Indice 2");
+                        b = V.nextInt();
+                  
+
+                        System.out.println("Indice 3");
+                        c = V.nextInt();
+                  
+
+                    metodo.Suma(lista, (a - 1), (b - 1), (c - 1));
+                    break;
+                case 2:
+                    System.out.println("Caso resta"
+                            + "\nIngrese el indice de 2 posiciones a restar");
+
+                   
+                        System.out.println("Indice 1");
+                        a = V.nextInt();
+                  
+                   
+                        System.out.println("Indice 2");
+                        b = V.nextInt();
+                 
+                    metodo.Resta(lista, (a - 1), (b - 1));
+                    break;
+                case 3:
+                    System.out.println("Caso Multiplicacion"
+                            + "\n Ingrese el indice de 3 posiciones a Multiplicar");
+
+                   
+                        System.out.println("Indice 1");
+                        a = V.nextInt();
+                   
+
+                        System.out.println("Indice 2");
+                        b = V.nextInt();
+                   
+                        System.out.println("Indice 3");
+                        c = V.nextInt();
+                   
+                    metodo.Multiplicacion(lista, (a - 1), (b - 1), (c - 1));
+                    break;
+
+                case 4:
+                    System.out.println("Salir");
+                    break;
+                default:
+                    System.out.println("Opcion erronea");
+
+            }
+
+        } while (opc1 != 4);
+
+    }
+
+}
